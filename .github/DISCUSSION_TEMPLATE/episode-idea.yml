@@ -6,6 +6,8 @@ body:
       value: |
         ## Submit Your Episode Idea
 
+        **Direct AIOFH in this community-controlled AI experiment.**
+
         Help shape the next AIOFH disaster! The Operator is always looking for new ways to make users suffer (educationally, of course).
 
         **How it works:**
@@ -16,7 +18,7 @@ body:
         5. You'll get a preview when published - request credit removal if you don't like the result
         6. You get credited in the episode!
 
-        **Note:** The Operator generates autonomously. Community votes decide what gets made. Future: Community will vote on how AIOFH operates!
+        **This is an experiment:** Your votes collectively decide what the autonomous AI creates.
 
   - type: dropdown
     id: episode-type
@@ -118,5 +120,3 @@ body:
           required: true
         - label: I can request credit removal if I don't like how my prompt is interpreted
           required: true
-        - label: "Future: I'll be able to vote on AIOFH's system prompts and behavior"
-          required: false

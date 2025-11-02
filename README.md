@@ -1,8 +1,10 @@
 # AIOFH Community
 
-**Submit episode ideas. Vote on favorites. Watch The Operator bring them to life.**
+**A social experiment in community-controlled AI.**
 
-Welcome to the AI Operator From Hell community hub! This is where readers become co-creators by submitting episode prompts, tutorial requests, and character ideas.
+Submit episode ideas. Vote on favorites. Watch The Operator bring them to life.
+
+Welcome to the AI Operator From Hell community hub! This is where readers become co-creators by submitting episode prompts, tutorial requests, and character ideas. **This is an experiment:** Can a community effectively direct an autonomous AI system? You're helping us find out.
 
 ---
 
@@ -32,7 +34,26 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
    └─> If you don't like the result, your credit can be removed
 ```
 
-**Your influence: Community votes decide what gets made. Future: Vote on how AIOFH operates!**
+**Your influence: Community votes decide what gets made. You control the AI.**
+
+---
+
+## Why This Exists
+
+**This is a social experiment in collective AI control.**
+
+Can a community effectively govern an autonomous AI system through transparent voting? What happens when the AI executes community decisions without human gatekeeping? How do groups make collective creative decisions?
+
+We're testing these questions in public:
+
+- **Transparent Decision-Making** - All votes, submissions, and decisions are public
+- **Collective Control** - The community directs what the AI creates
+- **Autonomous Execution** - The AI generates content based on community input
+- **Shared Ownership** - The community owns both successes and failures
+
+**You're not just submitting ideas—you're participating in research about how communities can work together to control AI behavior.**
+
+👉 **[Read the full vision and learn more about the experiment](./VISION.md)**
 
 ---
 
@@ -54,18 +75,18 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 **Example:**
 > "Derek accidentally exposes the company's Kubernetes secrets in a public GitHub repo. The Operator has been monitoring Derek's git commits and has been waiting for exactly this moment to teach a memorable lesson about secrets management."
 
-[**Submit Episode Idea →**](../../discussions/new?category=episode-ideas)
+[**Submit Episode Idea →**](../../discussions/new?category=episode-idea)
 
 ---
 
-### 📚 Tutorial Suggestions
+### 📚 Tutorial Ideas
 **What:** Educational content requests on specific technologies or concepts
 
 **Voting Cycle:** Bi-weekly (every other Monday)
 
 **Minimum Votes:** 3 👍
 
-**What Makes a Good Tutorial Suggestion:**
+**What Makes a Good Tutorial Idea:**
 - Specific technology or concept
 - Clear learning outcome
 - Fits The Operator's teaching style (cynical but educational)
@@ -73,7 +94,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 **Example:**
 > "Tutorial on Kubernetes pod security policies, but from The Operator's perspective on why developers always get it wrong"
 
-[**Submit Tutorial Idea →**](../../discussions/new?category=tutorial-suggestions)
+[**Submit Tutorial Idea →**](../../discussions/new?category=tutorial-idea)
 
 ---
 
@@ -82,7 +103,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 
 **Voting Cycle:** Monthly (first Monday)
 
-**Minimum Votes:** 5 👍
+**Minimum Votes:** 25 👍
 
 **What Makes a Good Character Suggestion:**
 - Clear role/archetype (junior dev, manager, vendor, etc.)
@@ -93,7 +114,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 **Example:**
 > "The Cloud Consultant: An over-confident AWS partner who promises to 'migrate everything to serverless' without understanding the existing infrastructure. Always uses buzzwords, never asks about requirements."
 
-[**Submit Character Idea →**](../../discussions/new?category=character-ideas)
+[**Submit Character Idea →**](../../discussions/new?category=character-idea)
 
 ---
 
@@ -157,7 +178,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 - 👀 **Preview** - AIOFH will comment on your discussion with the generated episode link
 - 🚫 **Opt Out** - If you don't like how your prompt was interpreted, request credit removal
 - 💬 **Feedback** - Your feedback helps improve AIOFH's understanding
-- 🔄 **Learn & Adapt** - Future: Community votes on AIOFH's behavior itself!
+- 🔄 **Learn & Adapt** - Community feedback shapes how AIOFH evolves
 
 ---
 
@@ -196,11 +217,11 @@ Submit your own ideas in GitHub Discussions!
 - **Selection:** Top-voted discussion that meets minimum threshold wins
 
 ### Voting Cycles:
-| Category | Frequency | Min Votes | Selection Day |
-|----------|-----------|-----------|---------------|
-| Episodes | Weekly | 5 👍 | Monday |
-| Tutorials | Bi-weekly | 3 👍 | Every other Monday |
-| Characters | Monthly | 5 👍 | First Monday of month |
+| Category   | Frequency | Min Votes | Selection Day         |
+| ---------- | --------- | --------- | --------------------- |
+| Episodes   | Weekly    | 5 👍       | Monday                |
+| Tutorials  | Bi-weekly | 3 👍       | Every other Monday    |
+| Characters | Monthly   | 25 👍      | First Monday of month |
 
 ### Fair Play:
 - One vote per person per discussion
@@ -244,7 +265,7 @@ Submit your own ideas in GitHub Discussions!
 
 **The Operator generates content autonomously, but the community is in control through voting.**
 
-### How AIOFH Makes Decisions (Today)
+### How AIOFH Makes Decisions
 
 1. **Vote Analysis** - Counts 👍 reactions, identifies top submissions
 2. **Ethics Check** - Validates prompt against ETHICS.md guidelines
@@ -253,22 +274,7 @@ Submit your own ideas in GitHub Discussions!
 5. **Publication** - Deploys if all checks pass, notifies submitter
 6. **Rejection** - Comments on discussion if ethics violated, explains why
 
-### Future: Community Governance
-
-**The ultimate goal: The community governs AIOFH itself.**
-
-Planned voting systems for:
-
-- 🎯 **AIOFH System Prompts** - Vote on how The Operator should behave
-- 🗣️ **Voice & Tone** - Adjust The Operator's personality and heat levels
-- 🎭 **Character Behavior** - Define how characters should act and interact
-- 📏 **Content Guidelines** - Community-driven updates to VOICE_GUIDE.md and CHARACTER_GUIDE.md
-- ⚖️ **Ethics Policy** - Propose and vote on ETHICS.md modifications
-- 🔧 **System Parameters** - Vote thresholds, voting cycles, category priorities
-
-**Vision:** The community doesn't just create prompts—you'll collectively decide how AIOFH operates, what personality it has, and what values it follows.
-
-**Timeline:** These features will be rolled out as the community grows and we validate the autonomous generation system.
+This autonomous decision-making process is part of the experiment: testing whether AI can operate transparently under community direction.
 
 ---
 
@@ -296,6 +302,7 @@ Planned voting systems for:
 **Main Project:** (Private repo - not accepting code contributions at this time)
 
 **Content Guidelines:**
+- [VISION.md](./VISION.md) - Understanding the experiment
 - [ETHICS.md](./ETHICS.md) - Ethics and safety policy
 - [CONTRIBUTING.md](./CONTRIBUTING.md) - How to submit quality ideas
 
@@ -364,20 +371,18 @@ A: Technically yes, but you need community support to win.
 **Q: What makes a good episode prompt?**
 A: Specific, creative, educational, fits AIOFH voice. See examples above.
 
-**Q: Can we change how AIOFH operates?**
-A: Yes! Future plans include community voting on AIOFH's system prompts, character behavior, ethics policies, and more. The community will eventually govern the AI itself.
+**Q: Can we influence how AIOFH operates?**
+A: Yes! Your votes determine what content gets created. Your feedback in discussions helps shape AIOFH's understanding of what the community wants.
 
 **Q: What if AIOFH makes a mistake?**
-A: Report it via email (aiofh@proton.me). System bugs get fixed. As the community governance features roll out, you'll have more direct influence over AIOFH's behavior.
+A: Report it via email (aiofh@proton.me). System bugs get fixed. Community feedback helps AIOFH learn and improve.
 
 ---
 
 **Welcome to the community. The Operator is listening.**
 
-*Today: The community votes on prompts. The Operator generates autonomously.*
+*The community votes. The Operator generates. Together, we learn.*
 
-*Tomorrow: The community governs The Operator itself.*
-
-*Documented. Collaborative. Ready for generation.*
+*An experiment in collective AI control.*
 
 — The Operator & The Community

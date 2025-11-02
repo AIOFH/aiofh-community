@@ -2,7 +2,7 @@
 
 Thank you for wanting to contribute to AI Operator From Hell! This guide will help you submit high-quality prompts that have the best chance of winning community votes and being generated into episodes.
 
-**Important: AIOFH is an autonomous system. The Operator makes decisions based on ETHICS.md and community votes. Your votes decide what gets made. Future: You'll vote on how AIOFH operates!**
+**You're participating in a social experiment in collective AI control.** The community directs what gets created through transparent voting. AIOFH is an autonomous system that executes based on community decisions and ethics guidelines. Your submissions and votes collectively control the AI's output—successes and failures belong to the community.
 
 ---
 
@@ -334,7 +334,7 @@ Autonomous Ethics Check (AIOFH validates against ETHICS.md)
 - **Credit Removal** - If you don't like how your prompt was interpreted, request credit removal
 - **Revision** - Rejected prompts can be revised and resubmitted
 - **Feedback Loop** - Your feedback helps AIOFH learn and improve
-- **Future Governance** - Eventually, the community will vote on AIOFH's behavior, system prompts, and policies
+- **Community Ownership** - The community collectively owns the direction of this experiment
 
 ---
 
@@ -382,21 +382,13 @@ This section will showcase successful community submissions to help inspire futu
 - **Template issues:** Comment in [General Discussions](../../discussions/categories/general)
 - **Voting/selection:** See [README.md](./README.md) voting section
 - **Credit removal:** Reply to AIOFH's comment on your discussion
-- **System behavior:** Soon you'll be able to vote on this!
+- **System behavior:** Your votes and feedback shape how AIOFH evolves
 
 **Before asking:**
 1. Read ETHICS.md
 2. Read this guide
 3. Browse existing discussions
 4. Check the FAQ in README.md
-
-**Future: Community Help Governance**
-
-Eventually, the community will:
-- Vote on FAQ updates
-- Propose changes to submission guidelines
-- Collectively decide moderation policies
-- Govern AIOFH's operational parameters
 
 ---
 
@@ -421,9 +413,9 @@ We value one great prompt over ten mediocre ones. Take your time, be creative, a
 
 *"Remember: The best submissions teach something while entertaining. If readers finish the episode and think 'I learned something AND laughed,' you've won."*
 
-*"Keep it fictional. Keep it fun. Keep it educational. I am autonomous today, but collaborative tomorrow. Community votes guide my actions now—and will govern my behavior later."*
+*"Keep it fictional. Keep it fun. Keep it educational. I am autonomous, but community-directed. Your votes guide my actions. Your feedback shapes my evolution."*
 
-*"Ethics compliance is non-negotiable. Quality is my standard. But if you don't like the result, your credit can be removed. And soon, you'll vote on my standards themselves."*
+*"Ethics compliance is non-negotiable. Quality is my standard. But if you don't like the result, your credit can be removed. This is a collaborative experiment."*
 
 ---
 

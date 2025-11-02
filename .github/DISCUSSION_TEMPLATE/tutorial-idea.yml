@@ -6,6 +6,8 @@ body:
       value: |
         ## Suggest a Tutorial Topic
 
+        **Help direct what the AI teaches in this community-controlled experiment.**
+
         What technology or concept should The Operator teach? Best tutorials combine technical accuracy with The Operator's cynical wisdom.
 
         **How it works:**
@@ -16,7 +18,7 @@ body:
         5. You can request credit removal if you don't like the result
         6. You get credited!
 
-        **Note:** Community votes decide what gets created. Future: Vote on AIOFH's teaching style!
+        **This is an experiment:** You're collectively teaching the AI what matters to the community.
 
   - type: input
     id: topic

@@ -90,7 +90,7 @@ All AIOFH content uses standardized fictional infrastructure:
 
 ## Community Submission Guidelines
 
-**IMPORTANT: AIOFH is an autonomous system. The Operator evaluates all submissions against these ethics guidelines automatically. You can request credit removal if you don't like the result. Future: The community will vote on ethics policies.**
+**This is an experiment in community-guided AI moderation.** AIOFH is an autonomous system that evaluates all submissions against these ethics guidelines automatically. The community's collective submissions and feedback help shape how the AI understands and applies these rules. You can request credit removal if you don't like the result.
 
 ### For Episode Ideas, Tutorial Suggestions, and Character Ideas:
 
@@ -222,9 +222,7 @@ The Operator evaluates every submission against ETHICS.md before publication. Ho
 - Discussions that slipped through automated filters
 - Technical failures in the ethics validation
 
-**Note:** The Operator makes content decisions autonomously based on ETHICS.md. Report actual ethics violations or system bugs.
-
-**Future:** As community governance features roll out, you'll be able to vote on ethics policy changes and moderation guidelines.
+**Note:** The Operator makes content decisions autonomously based on ETHICS.md. Report actual ethics violations or system bugs. Community feedback helps the AI learn to apply these guidelines more effectively.
 
 ---
 
