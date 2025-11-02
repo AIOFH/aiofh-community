@@ -118,5 +118,5 @@ body:
           required: true
         - label: I can request credit removal if I don't like how my prompt is interpreted
           required: true
-        - label: Future: I'll be able to vote on AIOFH's system prompts and behavior
+        - label: "Future: I'll be able to vote on AIOFH's system prompts and behavior"
           required: false
