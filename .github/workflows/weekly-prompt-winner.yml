@@ -1,0 +1,253 @@
+name: Weekly Community Prompt Winner
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Every Monday at 00:00 UTC
+  workflow_dispatch:  # Allow manual trigger for testing
+
+jobs:
+  find-winners:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      discussions: read
+
+    steps:
+      - name: Find Episode Winner
+        uses: actions/github-script@v7
+        with:
+          script: |
+            console.log('🔍 Finding top-voted episode ideas...');
+
+            // Get all discussions
+            const query = `
+              query($owner: String!, $repo: String!) {
+                repository(owner: $owner, name: $repo) {
+                  discussions(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes {
+                      number
+                      title
+                      body
+                      createdAt
+                      author {
+                        login
+                      }
+                      category {
+                        name
+                      }
+                      reactions(content: THUMBS_UP) {
+                        totalCount
+                      }
+                      labels(first: 10) {
+                        nodes {
+                          name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const result = await github.graphql(query, {
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const discussions = result.repository.discussions.nodes;
+
+            // Filter for episode ideas from the past week
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+            const episodeIdeas = discussions.filter(d =>
+              d.category.name === 'Episode Ideas' &&
+              new Date(d.createdAt) >= oneWeekAgo &&
+              d.reactions.totalCount >= 5
+            );
+
+            console.log(`Found ${episodeIdeas.length} episode ideas with 5+ votes from the past week`);
+
+            if (episodeIdeas.length > 0) {
+              // Sort by vote count
+              const winner = episodeIdeas.sort((a, b) =>
+                b.reactions.totalCount - a.reactions.totalCount
+              )[0];
+
+              console.log(`🏆 Winner: Discussion #${winner.number} with ${winner.reactions.totalCount} votes`);
+
+              // Create issue for manual review
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Episode Winner] ${winner.title}`,
+                body: `## 🏆 Weekly Episode Winner\n\n` +
+                      `**Discussion:** #${winner.number}\n` +
+                      `**Votes:** ${winner.reactions.totalCount} 👍\n` +
+                      `**Author:** @${winner.author.login}\n` +
+                      `**Submitted:** ${new Date(winner.createdAt).toLocaleDateString()}\n\n` +
+                      `---\n\n` +
+                      `## Prompt Details\n\n${winner.body}\n\n` +
+                      `---\n\n` +
+                      `## Action Required\n\n` +
+                      `- [ ] Review prompt for ethics compliance\n` +
+                      `- [ ] Run episode generator with this prompt\n` +
+                      `- [ ] Review generated content for quality\n` +
+                      `- [ ] Publish episode to aiofh.com\n` +
+                      `- [ ] Comment on discussion #${winner.number} with episode link\n` +
+                      `- [ ] Add community credit to episode frontmatter\n\n` +
+                      `**Discussion Link:** https://github.com/${context.repo.owner}/${context.repo.repo}/discussions/${winner.number}`,
+                labels: ['episode-winner', 'content-generation', 'community-prompt']
+              });
+
+              console.log('✅ Created issue for episode winner');
+            } else {
+              console.log('ℹ️ No episode ideas met the minimum vote threshold (5 votes) this week');
+
+              // Create informational issue
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Weekly Update] No episode winner this week`,
+                body: `## Weekly Voting Results\n\n` +
+                      `No episode ideas received the minimum 5 votes this week.\n\n` +
+                      `**Next Steps:**\n` +
+                      `- Encourage community participation\n` +
+                      `- Remind users to vote on existing discussions\n` +
+                      `- Consider featuring promising submissions\n\n` +
+                      `Previous discussions can still accumulate votes for future weeks!`,
+                labels: ['weekly-update']
+              });
+            }
+
+      - name: Find Tutorial Winner (Bi-weekly)
+        uses: actions/github-script@v7
+        if: github.event.schedule == '0 0 * * 1' && (github.run_number % 2 == 0)
+        with:
+          script: |
+            console.log('🔍 Finding top-voted tutorial suggestions (bi-weekly check)...');
+
+            const query = `
+              query($owner: String!, $repo: String!) {
+                repository(owner: $owner, name: $repo) {
+                  discussions(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes {
+                      number
+                      title
+                      body
+                      createdAt
+                      author {
+                        login
+                      }
+                      category {
+                        name
+                      }
+                      reactions(content: THUMBS_UP) {
+                        totalCount
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const result = await github.graphql(query, {
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const discussions = result.repository.discussions.nodes;
+
+            const twoWeeksAgo = new Date();
+            twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+
+            const tutorials = discussions.filter(d =>
+              d.category.name === 'Tutorial Suggestions' &&
+              new Date(d.createdAt) >= twoWeeksAgo &&
+              d.reactions.totalCount >= 3
+            );
+
+            if (tutorials.length > 0) {
+              const winner = tutorials.sort((a, b) =>
+                b.reactions.totalCount - a.reactions.totalCount
+              )[0];
+
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Tutorial Winner] ${winner.title}`,
+                body: `## 📚 Bi-weekly Tutorial Winner\n\n` +
+                      `**Discussion:** #${winner.number}\n` +
+                      `**Votes:** ${winner.reactions.totalCount} 👍\n` +
+                      `**Author:** @${winner.author.login}\n\n` +
+                      `${winner.body}\n\n` +
+                      `**Discussion Link:** https://github.com/${context.repo.owner}/${context.repo.repo}/discussions/${winner.number}`,
+                labels: ['tutorial-winner', 'content-generation']
+              });
+            }
+
+      - name: Find Character Winner (Monthly)
+        uses: actions/github-script@v7
+        if: github.event.schedule == '0 0 * * 1' && (github.run_number % 4 == 0)
+        with:
+          script: |
+            console.log('🔍 Finding top-voted character suggestions (monthly check)...');
+
+            const query = `
+              query($owner: String!, $repo: String!) {
+                repository(owner: $owner, name: $repo) {
+                  discussions(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes {
+                      number
+                      title
+                      body
+                      createdAt
+                      author {
+                        login
+                      }
+                      category {
+                        name
+                      }
+                      reactions(content: THUMBS_UP) {
+                        totalCount
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+            const result = await github.graphql(query, {
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const discussions = result.repository.discussions.nodes;
+
+            const oneMonthAgo = new Date();
+            oneMonthAgo.setDate(oneMonthAgo.getDate() - 30);
+
+            const characters = discussions.filter(d =>
+              d.category.name === 'Character Ideas' &&
+              new Date(d.createdAt) >= oneMonthAgo &&
+              d.reactions.totalCount >= 5
+            );
+
+            if (characters.length > 0) {
+              const winner = characters.sort((a, b) =>
+                b.reactions.totalCount - a.reactions.totalCount
+              )[0];
+
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Character Winner] ${winner.title}`,
+                body: `## 🎭 Monthly Character Winner\n\n` +
+                      `**Discussion:** #${winner.number}\n` +
+                      `**Votes:** ${winner.reactions.totalCount} 👍\n` +
+                      `**Author:** @${winner.author.login}\n\n` +
+                      `${winner.body}\n\n` +
+                      `**Discussion Link:** https://github.com/${context.repo.owner}/${context.repo.repo}/discussions/${winner.number}`,
+                labels: ['character-winner', 'content-generation']
+              });
+            }

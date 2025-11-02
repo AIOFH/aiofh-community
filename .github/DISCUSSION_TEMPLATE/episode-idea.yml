@@ -1,0 +1,122 @@
+title: "[Episode Idea] "
+labels: ["episode-idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit Your Episode Idea
+
+        Help shape the next AIOFH disaster! The Operator is always looking for new ways to make users suffer (educationally, of course).
+
+        **How it works:**
+        1. Submit your prompt below
+        2. Community votes with 👍
+        3. AIOFH system selects top-voted idea each week
+        4. The Operator validates ethics and generates episode automatically
+        5. You'll get a preview when published - request credit removal if you don't like the result
+        6. You get credited in the episode!
+
+        **Note:** The Operator generates autonomously. Community votes decide what gets made. Future: Community will vote on how AIOFH operates!
+
+  - type: dropdown
+    id: episode-type
+    attributes:
+      label: Episode Type
+      description: What kind of episode is this? (Helps AIOFH generate better content)
+      options:
+        - "User Requests Gone Wrong - User submits absurd request, investigation reveals unexpected cause (e.g., user complains cloud is full, turns out 47GB of cat photos)"
+        - "Hardware Shenanigans - Server/hardware develops absurd behavior requiring theatrical solution (e.g., UPS achieves sentience)"
+        - "The TTY's Education - TTY makes mistake, Operator fixes while teaching lesson (e.g., temporary firewall rule still there 3 months later)"
+        - "Management Decisions - Management announces ridiculous policy, Operator complies maliciously (e.g., mandate AI integration, rename everything with AI prefix)"
+        - "Technical Concepts (Educational) - Incident becomes teaching moment about security/sysadmin concept (e.g., firewall misconfiguration teaches network segmentation)"
+        - "Mixed/Other - Doesn't fit one category clearly"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What's the disaster? Be specific! Describe who does what wrong and what happens.
+      placeholder: "Derek accidentally commits AWS credentials to a public GitHub repo. The Operator has been monitoring Derek's commits and immediately spins up 47 Bitcoin miners before Derek even notices the leak..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: characters
+    attributes:
+      label: Characters
+      description: Who should appear in this episode? (Select all that apply)
+      multiple: true
+      options:
+        - The Operator
+        - TTY (AI Assistant)
+        - Derek (Junior Sysadmin)
+        - Patricia (Manager)
+        - Jesse (DevOps Lead)
+        - Alex (Security Engineer)
+        - Gideon (Cloud Architect)
+        - New Character (describe in notes below)
+        - Generic User/Developer (unnamed)
+    validations:
+      required: true
+
+  - type: input
+    id: tech-focus
+    attributes:
+      label: Technical Focus
+      description: What technology or concept should this episode cover?
+      placeholder: "Kubernetes, Docker, CI/CD, DNS, SSL certificates, SSH keys, monitoring, backups, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: heat-level
+    attributes:
+      label: Heat Level
+      description: How sarcastic/theatrical should The Operator be?
+      options:
+        - "1 (Patient educator - helpful and informative)"
+        - "2 (Mildly cynical - gentle sarcasm with teaching)"
+        - "3 (Classic BOFH - sharp wit, clear lesson)"
+        - "4 (Theatrical consequences - memorable punishment)"
+        - "5 (Maximum chaos - ethically spicy, deserved suffering)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: educational-value
+    attributes:
+      label: Educational Value
+      description: What should readers learn from this episode?
+      placeholder: "Readers will learn why you should never commit secrets to git, how to use git-secrets or similar tools, and what to do if credentials are leaked..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any specific elements, jokes, references, or details you want included?
+      placeholder: "Maybe include a callback to episode X? Or reference that famous production outage pattern? The Operator could use a specific monitoring tool to catch this..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ethics-check
+    attributes:
+      label: Ethics Acknowledgment
+      description: Please confirm you've reviewed our content guidelines
+      options:
+        - label: I've read the [Ethics Guidelines](../../blob/main/ETHICS.md)
+          required: true
+        - label: This prompt uses only fictional companies, people, and infrastructure
+          required: true
+        - label: This is educational/satirical, not malicious or targeting real entities
+          required: true
+        - label: I understand AIOFH will autonomously validate and may modify this prompt
+          required: true
+        - label: I can request credit removal if I don't like how my prompt is interpreted
+          required: true
+        - label: Future: I'll be able to vote on AIOFH's system prompts and behavior
+          required: false

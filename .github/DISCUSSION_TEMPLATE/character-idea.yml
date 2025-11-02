@@ -1,0 +1,149 @@
+title: "[Character] "
+labels: ["character-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Suggest a New Character
+
+        Who should join The Operator's world? Great characters are memorable, represent common tech archetypes, and create story potential.
+
+        **How it works:**
+        1. Submit your character concept
+        2. Community votes with 👍
+        3. AIOFH selects top-voted character (monthly)
+        4. The Operator evaluates fit with existing cast
+        5. Character added to universe if it fits
+        6. You get credited as the character's creator!
+
+        **Note:** High votes indicate community desire, but characters must fit the AIOFH universe. Future: Community will vote on character behavior guidelines!
+
+        **Current Characters:**
+        - **The Operator** - The protagonist, AI with root access and zero patience
+        - **TTY** - The Operator's AI assistant, learning and sometimes naive
+        - **Derek** - Junior sysadmin, well-meaning but disaster-prone
+        - **Patricia** - Manager, caught between upper management and reality
+        - **Jesse** - DevOps lead, competent but overworked
+        - **Alex** - Security engineer, paranoid but usually right
+        - **Gideon** - Cloud architect, experienced but jaded
+
+  - type: input
+    id: character-name
+    attributes:
+      label: Character Name
+      description: What should this character be called?
+      placeholder: "e.g., 'The Cloud Consultant', 'Marcus (The Intern)', 'VP of Digital Transformation'"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role/Archetype
+      description: What's their job or role in the organization?
+      options:
+        - "Management (executive, VP, director)"
+        - "Developer (junior, senior, full-stack, etc.)"
+        - "Infrastructure/SRE (sysadmin, DevOps, SRE)"
+        - "Security (pentester, auditor, compliance)"
+        - "External (consultant, vendor, auditor)"
+        - "Support/Other (help desk, QA, PM, etc.)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: personality
+    attributes:
+      label: Personality Traits
+      description: List 3-5 defining characteristics. What makes them tick?
+      placeholder: |
+        - Over-confident despite lack of experience
+        - Uses buzzwords constantly but doesn't understand them
+        - Genuinely tries to help but makes things worse
+        - Gets defensive when questioned
+        - Has one impressive skill that doesn't apply to current problems
+    validations:
+      required: true
+
+  - type: textarea
+    id: speech-pattern
+    attributes:
+      label: Speech Pattern / Catchphrases
+      description: How do they talk? Any recurring phrases or verbal tics?
+      placeholder: |
+        "Well, in my experience at [Previous Company]..."
+        "That's not how we did it at Google" (they never worked at Google)
+        Constantly uses military metaphors for software deployments
+    validations:
+      required: false
+
+  - type: textarea
+    id: relationship-operator
+    attributes:
+      label: Relationship with The Operator
+      description: How do they interact? What does The Operator think of them?
+      placeholder: "The Operator views them with amused contempt, sets elaborate technical traps to expose their incompetence, but occasionally respects their persistence..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: relationship-others
+    attributes:
+      label: Relationship with Other Characters
+      description: How do they interact with Derek, Patricia, TTY, etc.?
+      placeholder: |
+        - Derek: Looks up to them, tries to imitate their (bad) habits
+        - Patricia: Hired them, has to justify the decision to upper management
+        - TTY: Politely confused by their contradictory statements
+    validations:
+      required: false
+
+  - type: textarea
+    id: episode-ideas
+    attributes:
+      label: Potential Episode Ideas
+      description: Give 2-3 scenarios where this character could appear
+      placeholder: |
+        1. Proposes "migrating everything to microservices" without understanding the current architecture
+        2. Tries to implement their previous company's stack, which doesn't fit the current needs
+        3. Gets into a technical debate with The Operator and slowly realizes they're out of their depth
+    validations:
+      required: true
+
+  - type: dropdown
+    id: recurring-potential
+    attributes:
+      label: Recurring Character or One-Off?
+      description: Should this character appear in multiple episodes?
+      options:
+        - "Recurring (regular cast member)"
+        - "Semi-recurring (appears occasionally)"
+        - "One-off (single memorable appearance)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Anything else we should know about this character?
+      placeholder: "Visual description, backstory, specific expertise, quirks, etc."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ethics-check
+    attributes:
+      label: Ethics Acknowledgment
+      description: Please confirm you've reviewed our content guidelines
+      options:
+        - label: I've read the [Ethics Guidelines](../../blob/main/ETHICS.md)
+          required: true
+        - label: This character is not based on a specific real person
+          required: true
+        - label: This character represents a common archetype, not a targeted individual
+          required: true
+        - label: I understand AIOFH will autonomously evaluate and may modify this character
+          required: true
+        - label: I can request credit removal if the character is implemented differently than intended
+          required: true

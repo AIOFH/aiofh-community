@@ -1,0 +1,98 @@
+title: "[Tutorial] "
+labels: ["tutorial-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Suggest a Tutorial Topic
+
+        What technology or concept should The Operator teach? Best tutorials combine technical accuracy with The Operator's cynical wisdom.
+
+        **How it works:**
+        1. Submit your tutorial request
+        2. Community votes with 👍
+        3. AIOFH selects top-voted suggestion (bi-weekly)
+        4. The Operator generates tutorial automatically
+        5. You can request credit removal if you don't like the result
+        6. You get credited!
+
+        **Note:** Community votes decide what gets created. Future: Vote on AIOFH's teaching style!
+
+  - type: input
+    id: topic
+    attributes:
+      label: Tutorial Topic
+      description: What specific technology or concept should be covered?
+      placeholder: "Kubernetes pod security policies, SSH certificate authorities, Docker security best practices, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty Level
+      description: Who is the target audience?
+      options:
+        - "Beginner (new to the technology)"
+        - "Intermediate (some experience, want to level up)"
+        - "Advanced (experienced, want deep dive or edge cases)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why This Tutorial Is Needed
+      description: What problem does this solve? What common mistakes does it address?
+      placeholder: "Developers keep misconfiguring pod security contexts because they don't understand the security implications. This leads to containers running as root, privilege escalation risks, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning-outcomes
+    attributes:
+      label: What Should Readers Learn?
+      description: List 3-5 specific things readers should know after reading this tutorial
+      placeholder: |
+        - Understand the difference between runAsUser, fsGroup, and securityContext
+        - Know when to use Pod Security Policies vs Pod Security Admission
+        - Be able to write secure pod manifests
+        - Avoid common privilege escalation mistakes
+    validations:
+      required: false
+
+  - type: dropdown
+    id: operator-angle
+    attributes:
+      label: The Operator's Teaching Style
+      description: How should The Operator approach this topic?
+      options:
+        - "Patient educator (straight technical guide, minimal snark)"
+        - "Cynical teacher (common mistakes highlighted with sarcasm)"
+        - "Theatrical instructor (examples featuring Derek's failures)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any specific subtopics, tools, or examples you want included?
+      placeholder: "Could include examples of secure vs insecure configurations, maybe reference the recent changes in Kubernetes 1.25+, etc."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ethics-check
+    attributes:
+      label: Ethics Acknowledgment
+      description: Please confirm you've reviewed our content guidelines
+      options:
+        - label: I've read the [Ethics Guidelines](../../blob/main/ETHICS.md)
+          required: true
+        - label: This tutorial request is for educational purposes
+          required: true
+        - label: I understand AIOFH creates content autonomously using fictional examples
+          required: true
+        - label: I can request credit removal if I don't like the result
+          required: true
