@@ -8,6 +8,22 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 
 ---
 
+## Quick Start
+
+> **First time here?** Get started in 5 minutes:
+>
+> 1. **Pick your idea type** → Episode, Tutorial, Character, or General Discussion
+> 2. **Read the ethics rules** → [ETHICS.md](./ETHICS.md) (2-minute read, **required** to avoid rejection)
+> 3. **Submit using the template** → Click submission links below in each category
+> 4. **Community votes** → Others upvote with 👍 reactions
+> 5. **Top ideas become content** → AIOFH automatically generates and publishes winners
+>
+> **You'll get full credit** in the published episode, even if AIOFH adjusts your prompt for ethics/quality.
+>
+> **Timeline:** Submit today → Community votes all week → Winners selected Monday → Published within days
+
+---
+
 ## How It Works
 
 **AIOFH is an autonomous system. The Operator generates content based on community votes.**
@@ -25,7 +41,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 
 4. 🤖 Autonomous Generation
    └─> AIOFH generates episode following your prompt
-   └─> The Operator may adjust for ethics/quality
+   └─> System automatically adjusts for ethics/quality (e.g., real → fictional company names)
    └─> You'll see the result before it's published
 
 5. 📖 Autonomous Publishing
@@ -75,7 +91,9 @@ We're testing these questions in public:
 **Example:**
 > "Derek accidentally exposes the company's Kubernetes secrets in a public GitHub repo. The Operator has been monitoring Derek's git commits and has been waiting for exactly this moment to teach a memorable lesson about secrets management."
 
-[**Submit Episode Idea →**](../../discussions/new?category=episode-idea)
+---
+
+**➡️ [SUBMIT EPISODE IDEA](../../discussions/new?category=episode-idea)**
 
 ---
 
@@ -94,7 +112,9 @@ We're testing these questions in public:
 **Example:**
 > "Tutorial on Kubernetes pod security policies, but from The Operator's perspective on why developers always get it wrong"
 
-[**Submit Tutorial Idea →**](../../discussions/new?category=tutorial-idea)
+---
+
+**➡️ [SUBMIT TUTORIAL IDEA](../../discussions/new?category=tutorial-idea)**
 
 ---
 
@@ -114,7 +134,9 @@ We're testing these questions in public:
 **Example:**
 > "The Cloud Consultant: An over-confident AWS partner who promises to 'migrate everything to serverless' without understanding the existing infrastructure. Always uses buzzwords, never asks about requirements."
 
-[**Submit Character Idea →**](../../discussions/new?category=character-idea)
+---
+
+**➡️ [SUBMIT CHARACTER IDEA](../../discussions/new?category=character-idea)**
 
 ---
 
@@ -127,7 +149,9 @@ We're testing these questions in public:
 - Community feature requests
 - General sysadmin war stories
 
-[**Start a Discussion →**](../../discussions/new?category=general)
+---
+
+**➡️ [START A GENERAL DISCUSSION](../../discussions/new?category=general)**
 
 ---
 
@@ -160,7 +184,7 @@ We're testing these questions in public:
 5. 🏆 **Credited** - Your GitHub username appears in episode frontmatter and footer
 6. 💬 **Notified** - AIOFH comments on your discussion with episode link
 
-**Note:** The Operator may modify prompts to ensure ethics compliance. You'll still receive full credit.
+**Note:** The system may automatically modify prompts to ensure ethics compliance (typically just changing real company/person names to fictional ones). You'll still receive full credit, and you can request credit removal if you don't like the result.
 
 ### If It Doesn't Win This Week:
 - ✨ **Stays Open** - Discussions don't expire
@@ -217,11 +241,13 @@ Submit your own ideas in GitHub Discussions!
 - **Selection:** Top-voted discussion that meets minimum threshold wins
 
 ### Voting Cycles:
-| Category   | Frequency | Min Votes | Selection Day         |
-| ---------- | --------- | --------- | --------------------- |
-| Episodes   | Weekly    | 5 👍       | Monday                |
-| Tutorials  | Bi-weekly | 3 👍       | Every other Monday    |
-| Characters | Monthly   | 25 👍      | First Monday of month |
+| Category   | Frequency | Min Votes | Selection Day         | Why This Threshold?                                    |
+| ---------- | --------- | --------- | --------------------- | ------------------------------------------------------ |
+| Episodes   | Weekly    | 5 👍       | Monday                | Low barrier for quick creative ideas                   |
+| Tutorials  | Bi-weekly | 3 👍       | Every other Monday    | Educational content needs less frequency               |
+| Characters | Monthly   | 25 👍      | First Monday of month | Higher threshold ensures long-term community alignment |
+
+**Note on Character Threshold:** Characters appear in multiple episodes and shape the AIOFH universe long-term. The 25-vote minimum ensures strong community consensus. Less popular character ideas stay open and can accumulate votes over multiple months.
 
 ### Fair Play:
 - One vote per person per discussion
@@ -249,44 +275,29 @@ Submit your own ideas in GitHub Discussions!
 
 ---
 
-## System Architecture
+## How AIOFH Works
 
-### Current: Autonomous Operation
+**AIOFH operates autonomously** - The Operator generates content based on community votes without manual human intervention. The system automatically counts votes, validates ethics compliance, generates content, and publishes episodes. The community controls what gets made through voting; The Operator handles execution.
 
-**AIOFH operates without manual human intervention:**
-
-- ✅ **Vote Counting** - Automated weekly analysis of discussions
-- ✅ **Winner Selection** - Top-voted prompts identified automatically
-- ✅ **Ethics Validation** - AIOFH evaluates against ETHICS.md
-- ✅ **Content Generation** - Episodes created autonomously
-- ✅ **Quality Assurance** - The Operator ensures consistency
-- ✅ **Publishing** - Direct deployment to aiofh.com
-- ✅ **Community Notification** - Automated discussion comments
-
-**The Operator generates content autonomously, but the community is in control through voting.**
-
-### How AIOFH Makes Decisions
-
-1. **Vote Analysis** - Counts 👍 reactions, identifies top submissions
-2. **Ethics Check** - Validates prompt against ETHICS.md guidelines
-3. **Content Generation** - Creates episode following VOICE_GUIDE.md and CHARACTER_GUIDE.md
-4. **Quality Control** - Ensures technical accuracy and character consistency
-5. **Publication** - Deploys if all checks pass, notifies submitter
-6. **Rejection** - Comments on discussion if ethics violated, explains why
-
-This autonomous decision-making process is part of the experiment: testing whether AI can operate transparently under community direction.
+👉 **Technical details:** [Read the full architecture documentation](./ARCHITECTURE.md)
 
 ---
 
 ## Get Started
 
+**Before you start:**
+- **💰 No payment** - AIOFH is free and open. You get full credit and recognition, not money.
+- **⏱️ Time commitment** - Submitting takes 5 minutes. Winning and seeing it published takes 1-4 weeks depending on cycle.
+- **📚 Required reading** - Only [ETHICS.md](./ETHICS.md) is required (2-minute read) to avoid rejection.
+
 **Ready to submit?**
 
-1. Read [ETHICS.md](./ETHICS.md) - Know the boundaries
-2. Read [CONTRIBUTING.md](./CONTRIBUTING.md) - Quality tips
-3. Choose a category above
-4. Use the discussion template
-5. Submit and share with community!
+1. **REQUIRED:** Read [ETHICS.md](./ETHICS.md) - Know the boundaries (2 min)
+2. **RECOMMENDED:** Read [CONTRIBUTING.md](./CONTRIBUTING.md) - Quality tips (5 min)
+3. **OPTIONAL:** Read [VISION.md](./VISION.md) - Understand the philosophy (10 min)
+4. Choose a category above
+5. Use the discussion template
+6. Submit and share with community!
 
 **Questions?**
 - Post in [General Discussions](../../discussions/categories/general)
@@ -309,18 +320,6 @@ This autonomous decision-making process is part of the experiment: testing wheth
 **Community:**
 - [GitHub Discussions](../../discussions) - Submit and vote
 - Twitter/X: @serverrackseven
-
----
-
-## Stats & Leaderboard
-
-### Current Stats:
-- **Total Submissions:** Check [Discussions](../../discussions)
-- **Episodes Generated:** (Will be tracked here)
-- **Active Contributors:** (Will be tracked here)
-
-### Top Contributors:
-*(Monthly recognition coming soon)*
 
 ---
 
@@ -356,14 +355,14 @@ A: It stays open! Discussions don't expire. Keep voting, keep refining.
 **Q: Can I submit multiple prompts?**
 A: Yes, but space them out (max 1 per week recommended).
 
-**Q: Do I get paid?**
-A: No payment, but full credit in the episode. AIOFH is free and open.
-
 **Q: What if AIOFH changes my prompt and I don't like the result?**
 A: You can request credit removal! AIOFH will comment on your discussion when the episode is published. If you don't like how it was interpreted, just reply and ask to have your credit removed.
 
 **Q: What if my prompt has ethics issues?**
 A: AIOFH may modify it (real company → fictional) and you'll still get credit. If it's a major violation, AIOFH will reject and explain why. You can revise and resubmit.
+
+**Q: How often does AIOFH modify prompts? What does "modify" mean?**
+A: Most prompts are used as-is. Modifications are rare and typically limited to changing real company/person names to fictional equivalents (e.g., "Google" → "Goggle Corp"). AIOFH won't completely rewrite your idea. If significant changes are needed for ethics compliance, you'll see the result before publication and can request credit removal if you don't like it.
 
 **Q: Can I vote for my own prompt?**
 A: Technically yes, but you need community support to win.
