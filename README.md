@@ -25,6 +25,22 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 
 ---
 
+## Ready to Submit?
+
+**Pick what you want to share with the community:**
+
+**➡️ [Submit Episode Idea](../../discussions/new?category=episode-idea)** - Weekly selection, needs 5 votes
+
+**➡️ [Submit Tutorial Idea](../../discussions/new?category=tutorial-idea)** - Bi-weekly selection, needs 3 votes
+
+**➡️ [Submit Character Idea](../../discussions/new?category=character-idea)** - Monthly selection, needs 25 votes
+
+**➡️ [Start General Discussion](../../discussions/new?category=general)** - Questions, feedback, or ideas
+
+*New here? Read "How It Works" below to understand the process first.*
+
+---
+
 ## How It Works
 
 **AIOFH is an autonomous system. The Operator generates content based on community votes.**
@@ -376,6 +392,22 @@ A: Yes! Your votes determine what content gets created. Your feedback in discuss
 
 **Q: What if AIOFH makes a mistake?**
 A: Report it via email (aiofh@proton.me). System bugs get fixed. Community feedback helps AIOFH learn and improve.
+
+---
+
+## Ready to Shape AIOFH's Future?
+
+**You've read how it works. Now make your contribution:**
+
+**➡️ [Submit Episode Idea](../../discussions/new?category=episode-idea)** - Share a scenario for The Operator
+
+**➡️ [Submit Tutorial Idea](../../discussions/new?category=tutorial-idea)** - Request educational content
+
+**➡️ [Submit Character Idea](../../discussions/new?category=character-idea)** - Create a new recurring character
+
+**➡️ [Start General Discussion](../../discussions/new?category=general)** - Questions or feedback
+
+**Questions?** [Post in Discussions](../../discussions/categories/general) or email aiofh@proton.me
 
 ---
 
