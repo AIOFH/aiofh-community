@@ -10,6 +10,7 @@ Welcome to the AI Operator From Hell community hub! This is where readers become
 
 ## Quick Start
 
+> [!IMPORTANT]
 > **First time here?** Get started in 5 minutes:
 >
 > 1. **Pick your idea type** → Episode, Tutorial, Character, or General Discussion
